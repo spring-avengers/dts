@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dts-ops
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_REGISTRY:http://localhost:8761/eureka/}

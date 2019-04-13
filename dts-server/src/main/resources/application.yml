@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/dts_server?characterEncoding=utf-8&useSSL=false}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:abc@123}
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8080
+hazelcast:
+  version: 1.0.0
+dts:
+  lockTimeoutMillis: 3000
+  channelExpiredTimeoutMillis: 120000
+  rpcInvokeTimeout: 300000
+  retry:
+      enabled: true
+  headerRequest:
+    corePoolSizeCpuTimes: 30
+    maximumPoolSizeCpuTimes: 30
+    headerRequestKeepaliveTime: 60000
