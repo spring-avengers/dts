@@ -7,3 +7,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_REGISTRY:http://localhost:8761/eureka/}
+management:
+  metrics:
+    export:
+      influx:
+        enabled: false
+        uri: http://localhost:8086
