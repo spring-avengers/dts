@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dts-ccb
+    group: dts
+    version: 1.0.0
+management:
+  metrics:
+    export:
+      influx:
+        enabled: false
+        uri: http://localhost:8086
